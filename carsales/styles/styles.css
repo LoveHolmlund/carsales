@@ -1,0 +1,304 @@
+/* Inställningar för hela sidan och alla element */
+*, html {
+	box-sizing: border-box;
+}
+
+/* Inställningar för hela dokumentet */
+html {
+	font-family: 'arial';
+}
+
+/* Inställningar för bodyn */
+body {
+	background-color: rgb(220, 220, 220);
+	margin:0;
+}
+
+/* Inställningar som påverkar hela main delen, där huvudinnehållet finns. */
+main {
+	min-width: 980px;
+	max-width: 1400px;
+	overflow:hidden;
+	scrollbar-width: none;
+	margin: auto;
+	background-color:#eee;
+	position: relative;
+	padding-bottom: 50px;
+	z-index: 1;
+}
+
+/* Övergripande inställningar för alla länkelement */
+a {
+	text-decoration: none;
+	font-size: 24px;
+}
+
+/* HEADER */
+header {
+	background-color: #111;
+}
+
+/* Påverkar diven loggan och företagstexten ligger i. */
+.logo-header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.company-logo {
+	display: inline-block;
+	width: 200px;
+}
+
+.company-logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.company-name {
+	flex: 0 0 80%;
+	display: flex;
+	color: white;
+	font-size: 44px;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Inställningar för den nya navigationsmenyn */
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+ul.main-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #111;
+    font-size: 20px;
+    display: flex;
+	color: white;
+}
+
+ul.main-menu>li {
+    position: relative;
+}
+
+ul.main-menu>li>a {
+    display: block;
+    padding: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul.main-menu>li:hover>a {
+    background-color: white;
+	color: black;
+}
+
+ul.main-menu>li>ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+ul.main-menu>li:hover>ul {
+	display: inline-block;
+	/* z-index användes för att dropdown boxen ska hamna ovanför main. */
+	z-index: 2;
+	width: 200px;
+	height: auto;
+}
+
+/*Källa: https://stackoverflow.com/a/7788037 */
+/* Detta gör att alla förutom första och sista li elementet får en margin för att göra dropdown menyn snyggare. 
+   I det här fallet behövde jag egentligen bara använda ":nth-child(even)" men det här funkar bättre ju mer  
+   menyval man lägger till */
+ul.main-menu>li:hover>ul>li:not(:first-child):not(:last-child) {
+	margin:3px 0;
+}
+
+ul.main-menu>li:hover>ul>li>a {
+	display: block;
+	color: #111;
+	align-content: center;
+	padding: 8px;
+	font-size: 18px;
+/* 	Källa: https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_speed */	
+/*  Vi lärde oss egentligen bara att man inte skulle använda transition på hover, utan på grundelementet */
+	transition: ease-in-out 0.3s;
+}
+
+ul.main-menu>li:hover>ul>li>a:hover {
+	background-color: rgba(235, 235, 235, 0.95);
+	padding: 8px 12px;
+}
+
+
+
+/* The hero image */
+.hero-image {
+	/* Källa till bild i hero-image https://www.freepik.com/free-photo/car-road-through-winter-park_11811870.htm#query=car%20road%20winter&position=24&from_view=search */
+	/* Linear gradient gör så att man kan få ett mörkare lager ovanpå bilden vilket man kan kontrollera genom att ändra
+	på opacity i en av de två rgba. Den första rgba gör att färgen kommer uppifrån till ner och den andra kommer nedifrån och går uppåt
+	Detta gör texten lättare att läsa ifall bilden är ljus */
+	background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/hero.png");
+	/* Set a specific height */
+	height: 700px;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	max-width: 100%;
+}
+
+/* Place cutout text in the middle of the hero-image class */
+.hero-text {
+	/* Ändrar färg på texten för att göra den ljusare */
+	color: rgb(15, 15, 15);
+	background-color: white; /* Makes the background so we can see our cutout text */
+  	font-size: 2.5vw; /* Responsive font size */
+ 	font-weight: bold;
+  	margin: 0 auto; /* Center the text container */
+  	padding: 10px;
+  	width: 50%;
+  	text-align: center; /* Center text */
+  	position: absolute; /* Position text */
+	/* top och left används pga position: absolute; */
+  	top: 50%; /* Position text in the middle */
+  	left: 50%; /* Position text in the middle */
+  	transform: translate(-50%, -50%); /* Position text in the middle */
+	/* mix-blend-mode: screen; gör att texten får bakgrundens färg */
+  	mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+/* Länk till hemsidan för herobilden */
+#heroref {
+	color: black; 
+	text-decoration: none; 
+	font-size: 20px; 
+	margin-left:30%;
+}
+
+/* En navbar för leftcontainer med en dropdown box för att sortera bilarna efter olika kategorier */
+.sortera {
+	margin: 100px 15% 0;
+	width:60%;
+	background-color: #111;
+	text-align: right;
+	border-radius: 5px 5px 0 0;
+}
+
+#sortera {
+	border-radius: 3px;
+	padding: 5px;
+	margin-right: 70px;
+}
+
+.leftimage {
+	width:40%;
+	float:left;
+}
+
+.leftimage img {
+	display:block;
+	min-width: 284px;
+	max-width: 100%;
+	min-height: 160px;
+	max-height: 100%;
+}
+
+.leftcontainer {
+	/* display: inline-block; tar bort den högra sidan av containern så vi kan få plats med rightcontainer på högra sidan */
+	display: inline-block;
+	background-color: white;
+	width: 60%;
+	max-height: 160px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	/* Gör så att bilden inte hamnar utanför boxen, utan håller den inne. */
+	overflow:hidden;
+	margin-left:15%;
+	margin-bottom:5px;
+	text-align: left;
+}
+
+.leftcontainer:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Knapp till leftcontainer, samt köpknapp i objektsidan */
+.visa {
+	border: none;
+	background-color: black;
+	color: white;
+	padding:10px 35px;
+	width: 100px;
+	height: 35px;
+	float: right;
+	margin-right: 10%;
+	font-size: 16px;
+	text-align: center;
+	/*inte snyggt fix, men gör att köp knappen i objektsidan inte har bold text pga h2 tag 
+	(ville ha den på samma rad som priset, vilket är en h2 tag) */
+	font-weight: normal;
+	transition: ease-in-out 0.3s;
+} 
+
+.visa:hover {
+	background-color: rgb(30, 30, 30);
+}
+
+/* Container som ska vara på den högra sidan av leftcontainer */
+.rightcontainer {
+	position: absolute;
+	top: 805px;
+	right: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.rightcontainer h3{
+	margin-bottom: 30px;
+}
+
+.rightcontainer a {
+	border-radius: 5px;
+	color: black;
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.rightcontainer figure {
+	width: 150px;
+}
+
+.rightcontainer figcaption {
+	width: 150px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.rightcontainer img {
+	width: 150px;
+	height: 100px;
+}
+
+/* .map gäller enbart hitta-oss.html */
+.map {
+	width: 600px; 
+	height: 450px; 
+	margin-left: 25%; 
+	border:0;
+}

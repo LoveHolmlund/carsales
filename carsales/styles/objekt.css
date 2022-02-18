@@ -1,0 +1,92 @@
+/* CSS FÖR ENBART OBJEKTSIDOR */
+
+html {
+    /* Källa: https://www.w3schools.com/howto/howto_css_smooth_scroll.asp */
+    /* Gör så att när man klickar på knapparna i .infobar scrollar den inte ner till divboxarna blixtsnabbt,
+    utan ger en "smoothing" effekt för att vara lättare på ögonen */
+	scroll-behavior: smooth;
+}
+
+/* Flexcontainer */
+#container {
+	display:flex;
+    flex-wrap: wrap;
+}
+/* Preview visar en större bild på objektet */
+.preview {
+	width:35%;
+	height: 450px;
+	margin: 5% 0 2.5% 10%;
+}
+
+.preview img {
+    min-height: 450px;
+	max-height: 100%;
+	border: 1px solid rgb(220, 220, 220);
+}
+
+/* Visar bilnamn och pris, har en köpknapp i sig men den ligger i styles.css och heter .visa */
+.purchaseinfo {
+	background-color: white;
+	width:25%;
+	height: 100%;
+	border: 1px solid rgb(220, 220, 220);
+	margin-top: 5%;
+	margin-left: 25%;
+	
+}
+
+.purchaseinfo h2{
+	padding: 0px 10px 10px 10px;
+	margin-top: 0px;
+}
+.purchaseinfo p, h1{
+	padding: 10px 0px 10px 10px;
+	margin-bottom: 0px;
+}
+
+/* navbar med klickbara kategorier som tar en till olika kategorier/sektioner av sidan */
+.infobar {
+	width: 746px;
+	height: 50px;
+	margin-left: 10%;
+	background-color: black;
+}
+
+.infobar tr a {
+	padding:12px 40px ;
+	text-align: center;
+	display:block;
+    color: white;
+}
+
+.infobar tr td a:hover {
+	background-color: white;
+	color:black;
+}
+
+/* Här ligger all information om bilen */
+.infobox {
+	max-width: 746px;
+	padding:1% 5% 2% 2%;
+	margin-left: 10%;
+	margin-bottom: 1%;
+	background-color: white;
+	font-size: 18px;
+}
+
+.infobox hr {
+	margin: 5% 0;
+}
+
+.specs th {
+	border: 1px solid rgb(220, 220, 220);
+	width: 1%;
+	padding: 2% 1%;
+}
+
+.specs td {
+	border: 1px solid rgb(220, 220, 220);
+	width: 4%;
+	padding: 2% 1%;
+}

@@ -1,0 +1,148 @@
+/* CSS FÖR ENBART KONTAKTSIDAN */
+
+/* Påverkar endast main taggen på kontaktsidan */
+main.contact-us {
+	max-width: unset;
+	/*
+	Källa:
+	    https://www.freepik.com/free-photo/technician-with-blue-workwear-holding-wrench-tire-while-showing-thumb-up_10519453.htm#query=car%20shop&position=35&from_view=search
+	*/
+	background-image: url("../img/contact-image.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label {
+	flex: 0 0 100%;
+}
+
+input {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	flex: 0 0 100%;
+}
+
+/* Påverkar inputen taggen där användaren kan bifoga filer */
+input[type="file"] {
+	border: none;
+}
+
+/* Ändrar utséendet för alternativen i drop down menyerna i formuläret på kontaktsidan */
+select {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	background-color:#fff;
+}
+
+textarea {
+	flex: 0 0 100%;
+	border: none;
+	margin-bottom: 20px;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+form {
+	flex: 0 0 60%;
+	margin: 50px 0px;
+	background-color: white;
+	padding: 50px;
+}
+
+form div.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form div.wrapper h1 {
+	flex: 0 0 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+form div.form-top {
+	display: flex;
+	align-items: flex-start;
+}
+
+form div.form-section {
+	flex: 0 0 50%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 5px;
+	justify-content: flex-start;
+}
+
+form div.form-section div {
+	flex: 0 0 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+form div.form-bottom {
+	display: flex;
+	flex: 0 0 100%;
+	flex-wrap: wrap;
+}
+
+/* Stylar diven som omsluter knapparnas div och diven för mailto i formuläret. */
+.buttons-wrapper {
+	margin-top: 20px;
+	flex: 0 0 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Stil för diven knapparna ligger i.  */
+.buttons {
+	flex: 0 0 30%;
+	display: flex;
+}
+
+/* Stylar knapparnas utséende i formuläret. */
+.buttons button {
+	padding: 20px;
+	margin-right: 10px;
+}
+
+/* Grundutséende för alla button-element i kontaktdokumentet.*/
+button {
+	border: none;
+	background-color: black;
+	color: white;
+	padding:0;
+}
+
+/* Vid hovring över button-element */
+button:hover {
+	transition:0.3s;
+	background-color: rgb(30, 30, 30);
+	cursor: pointer;
+}
+
+button a {
+	font-size: 16px;
+}
+
+
+/* Utséende för maillänk-diven längst ner på kontaktsidan i slutet av formulär. */
+.mailto {
+	flex: 0 0 60%;
+	display: flex;
+	align-items: center;
+}
+
+/* Stylar mailto-länken. */
+.mailto a {
+	color: black;
+	font-size: 16px;
+}

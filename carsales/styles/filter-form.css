@@ -1,0 +1,79 @@
+/* Detta css-dokument påverkar endast styligen för filterformuläret på indexsidan, och alla element inuti det. */
+form#filter-form {
+	padding: 20px;
+	flex: 0 0 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+
+form#filter-form > label {
+	flex: 0 0 100%;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+form#filter-form input[type="text"] {
+	flex: 0 0 100%;
+	border: none;
+	border-bottom: 1px inset black;
+	border-radius: 5px;
+	background-color: #eee;
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+.filter-checkboxes {
+	flex: 0 0 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.filter-checkboxes .checkboxes {
+	flex: 0 0 45%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.filter-checkboxes .checkboxes .checkbox-option{
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Stylar inputfältet användaren submitar formuläret med. Transition ligger på grundelementet för att effekten ska finnas när man hovrar över det. */
+form#filter-form input[type="submit"] {
+	margin-top: 10px;
+	border: none;
+	background-color: #111;
+	color: white;
+	padding: 10px;
+	transition:0.3s;
+}
+
+/* Påverkar utséendet vid hover av filtersubmiten. */
+form#filter-form input[type="submit"]:hover{
+	background-color: rgb(30, 30, 30);
+	cursor:pointer;
+}
+
+/* Här nedan påverkas layouten för radioknapparna i filterformuläret på indexsidan. */
+.filter-radiobtns {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.filter-radiobtns > .radiobtn-option {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.filter-checkboxes, .filter-radiobtns {
+	background-color: #eee;
+	padding: 10px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kontaktsida</title>
+        <link rel="icon" type="image/ico" href="img/fav-icon.png"/>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/kontakt.css">
+    </head>
+    <body>
+        <!-- Sidans huvudmeny med div för själva loggan och företagsnamn, och div för enbart navigeringsmenyn. -->
+        <header>
+            <div class="logo-header">
+                <div class="company-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="company-name">Begagnade och nya bilar</div>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Bilar</a>
+                        <ul>
+                            <li><a href="">Alla bilar</a></li>
+                            <li><a href="">Nya bilar</a></li>
+                            <li><a href="">Begagnade bilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="hitta-oss.html">Hitta oss</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-us">
+            <form>
+                <div class="wrapper">
+                    <h1>Kontakta oss</h1>
+                    <!-- Formuläret är indelat i flera sektioner för att kontrollera layouten lättare. -->
+                    <div class="form-top">
+                        <!-- Den vänstra sektionen innehåller inputs där användaren fyller i sin emailadress och en dropdown meny där de kan fylla i vilken typ av problem de upplever. -->
+                        <div class="form-section left">
+                            <!-- Box för att skriva in sin email-->
+                            <div>
+                                <label for="email">Din email:</label>
+                                <input type="email" required id="email" placeholder="johan.johansson@exempel.com">
+                            </div>
+                            <!-- Kunden väljer vilket problem de har-->
+                            <div>
+                                <label for="problem">Vad angår ditt problem?</label>
+                                <select id="problem">
+                                    <option hidden>Välj ett problem</option>
+                                    <option>Jag fick fel produkt</option>
+                                    <option>Min vara blev skadad under leverans</option>
+                                    <option>Min produkt kom inte fram</option>
+                                    <option>Mitt problem finns inte</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Den högra sektionen innehåller inputs där användaren kan fylla i sitt för och efternamn -->
+                        <div class="form-section right">
+                            <div>
+                                <!-- Förnamn-->
+                                <label for="name">Förnamn:</label>
+                                <input type="text" required id="name" placeholder="Skriv ditt förnamn">
+                            </div>
+                            <div>
+                                <!-- Efternamn-->
+                                <label for="lname">Efternamn:</label>
+                                <input type="text" required id="lname" placeholder="Skriv ditt efternamn">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Kommentarfält där personer skriver en kort beskrivning vad som är fel-->
+                    <div class="form-bottom">
+                        <label for="comments">Skriv en kort förklaring om ditt problem</label>
+                        <textarea style="width: 400px;" rows="10"  id="comments" placeholder="Skriv in din text här..."></textarea>
+                    </div>
+
+                    <label for="file">Vid fall av skada lägg till en bild på den skadade produkten</label>
+                    <div>
+                        <!-- Inputfält för bifogande av filer -->
+                        <input type="file" id="file">
+                    </div>
+                    
+                    <!-- En wrapper som omsluter formulärets knappar och maillänk. Diven är stylad med flex för att få mer kontroll över layouten och att maillänken ska hamna brevid knapparna istället för under. -->
+                    <div class="buttons-wrapper">
+                        <div class="buttons">
+                            <button type="submit">Skicka</button>
+                            <button type="reset">Rensa</button>
+                        </div>
+                        <div class="mailto">
+                            <p>
+                                Eller skicka ett mail direkt till oss
+                                <a href="mailto:example@gmail.com"><em><u>här</u></em></a>
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                   
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

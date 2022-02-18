@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Start</title>
+        <link rel="icon" type="image/ico" href="img/fav-icon.png"/>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/filter-form.css">
+    </head>
+    <body>
+        <!-- Sidans huvudmeny med div för själva loggan och företagsnamn, och div för enbart navigeringsmenyn. -->
+        <header>
+            <div class="logo-header">
+                <div class="company-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="company-name">Begagnade och nya bilar</div>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Bilar</a>
+                        <ul>
+                            <li><a href="">Alla bilar</a></li>
+                            <li><a href="">Nya bilar</a></li>
+                            <li><a href="">Begagnade bilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="hitta-oss.html">Hitta oss</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Källa till kod för hero-image https://www.w3schools.com/howto/howto_css_hero_image.asp-->
+            <!-- Sidans "Hero" som har en bild med lite text i mitten som ska vara på startsidan-->            
+            <div class="hero-image">
+                <!--Källa till hero-text https://www.w3schools.com/howto/howto_css_cutout_text.asp-->
+                <!--En cutout text som visas i mitten av bilden-->
+                <div class="hero-text">
+                    Hitta din drömbil<br>
+                    både begagnade och nya
+                </div>
+            </div>
+            <!--Hemsidan som vi fick bilden ifrån ville att man skulle ha en referenslänk med i hemsidan som man använder den i-->
+            <a id="heroref" href='https://www.freepik.com/photos/tree' target="_blank"><em>Tree photo created by wirestock - </em><u>www.freepik.com</u></a>
+
+            <table class="sortera">
+                <tr>
+                    <td><label for="sortera"></label>
+                        <select id="sortera">
+                            <option hidden>Sortera efter</option>
+                            <option>Nyheter</option>
+                            <option>Namn</option>
+                            <option>Pris stigande</option>
+                            <option>Pris fallande</option>
+                            <option>Bästsäljare</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="rightcontainer">
+                <form id="filter-form">
+                    <!-- Här kan användaren använda sig av sökfunktionen för att söka efter nyckelord och taggar. -->
+                    <label for="searchValue">Filter</label>
+                    <input type="text" id="searchValue">
+                    <!-- Här kan användaren checka i vilka bilmodeller som ska visas på sidan genom att filtrera på ett urval. -->
+                    <div class="filter-checkboxes">
+                        <div class="checkboxes left">
+                            <div class="checkbox-option">
+                                <label for="volvo">Volvo</label>
+                                <input type="checkbox" id="volvo" name="car-model" value="volvo">
+                            </div>
+                            <div class="checkbox-option">
+                                <label for="saab">Saab</label>
+                                <input type="checkbox" id="saab" name="car-model" value="saab">
+                            </div>
+                            <div class="checkbox-option">
+                                <label for="kia">Kia</label>
+                                <input type="checkbox" id="kia" name="car-model" value="kia">
+                            </div>   
+                        </div>
+                        <div class="checkboxes right">
+                            <div class="checkbox-option">
+                                <label for="fiat">Fiat</label>
+                                <input type="checkbox" id="fiat" name="car-model" value="fiat">
+                            </div>
+                            <div class="checkbox-option">
+                                <label for="lada">Lada</label>
+                                <input type="checkbox" id="lada" name="car-model" value="lada">
+                            </div>
+                            <div class="checkbox-option">
+                                <label for="citroën">Citroën</label>
+                                <input type="checkbox" id="citroën" name="car-model" value="citroën">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Val av att inkludera alla typer av bilar, men också antingen begagnade eller nya bilar endast. -->
+                    <div class="filter-radiobtns">
+                        <div class="radiobtn-option">
+                            <label for="alla">
+                                Alla
+                            </label>
+                            <input type="radio" id="alla" name="condition">
+                        </div>
+                        <div class="radiobtn-option">
+                            <label for="begagnade">
+                                Begagnade
+                            </label>
+                            <input type="radio" id="begagnade" name="condition">
+                        </div>
+                        <div class="radiobtn-option">
+                            <label for="nya">
+                                Nya
+                            </label>
+                            <input type="radio" id="nya" name="condition">
+                        </div>
+                    </div>
+                    <input type="submit" name="filter" value="Filtrera">
+                </form>
+                <h3>Andra populära bilmärken</h3>
+                <a href="https://www.kau.se/" target="_blank">
+                    <figure>
+                        <!-- Källa: https://duckduckgo.com/?q=kia+logo&t=ffab&iar=images&iaf=license%3AAny&iax=images&ia=images&iai=https%3A%2F%2Factivator-production.s3.amazonaws.com%2Fimages%2Fimages%2F1468%2Foriginal%2F1468.jpg -->
+                        <img src="img/thumbnails/kia.jpg">
+                        <figcaption>Kolla in alla de senaste modellerna från Kia!</figcaption>
+                    </figure>   
+                </a>
+            </div>
+
+                <!-- Box wrapping around image and text-->
+                <div class="leftcontainer">
+                    <div class="leftimage">
+                    <!--Källa: https://en.wikipedia.org/wiki/File:Volvo_V90_Cross_Country_T5.jpg-->
+                    <img src="img/thumbnails/v90-thumbnail.jpg" alt="Bild på en Volvo V90">
+                    </div>
+                    <h3 class="textnudge">Volvo V90</h3>
+
+                <p class="textnudge">Lite informationstext om bilen<br>Inte direkt så mycket men en del.</p>
+                <p class="textnudge">
+                    Försäljningspris: <strong>375000kr</strong>
+                     <a class="visa" href="volvo-v90.html">Visa</a>
+                </p>
+                </div>
+
+                <div class="leftcontainer">
+                    <div class="leftimage">
+                    <!--Källa: https://www.automobilesreview.com/gallery/volvo-s60-2000/2000-volvo-s60-01.jpg-->
+                    <img src="img/thumbnails/s-60-thumbnail.jpg" alt="Bild på en Volvo S60">
+                    </div>
+                    <h3 class="textnudge">Volvo S60</h3>
+                    <p class="textnudge">Lite informationstext om bilen<br>Inte direkt så mycket men en del.</p>
+                    <p class="textnudge">
+                        Försäljningspris: <strong>75000kr</strong>
+                        
+                        <a class="visa" href="volvo-s60.html">Visa</a>
+                    </p>
+                </div>
+               
+                <div class="leftcontainer">
+                <div class="leftimage">
+                <!--Källa: https://cdn.pixabay.com/photo/2018/08/27/02/09/volvo-3633888_960_720.jpg-->
+                <img src="img/thumbnails/pv-544-thumbnail.jpg" alt="Bild på en Volvo PV544 Sedan">
+                </div>
+                <h3 class="textnudge">Volvo PV544 Sedan</h3>
+                <p class="textnudge">Lite informationstext om bilen<br>Inte direkt så mycket men en del.</p>
+                <p class="textnudge">
+                    Försäljningspris: <strong>575000kr</strong>
+                    <a class="visa" href="volvo-pv544.html">Visa</a>
+                </p>
+                </div>   
+        </main>
+    </body>
+</html>

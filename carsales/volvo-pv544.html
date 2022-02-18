@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <title>Volvo V90</title>
+        <link rel="icon" type="image/ico" href="img/fav-icon.png"/>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/objekt.css">
+    </head>
+    <body>
+        <!-- Sidans huvudmeny med div för själva loggan och företagsnamn, och div för enbart navigeringsmenyn. -->
+        <header>
+            <div class="logo-header">
+                <div class="company-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="company-name">Begagnade och nya bilar</div>
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Bilar</a>
+                        <ul>
+                            <li><a href="">Alla bilar</a></li>
+                            <li><a href="">Nya bilar</a></li>
+                            <li><a href="">Begagnade bilar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="hitta-oss.html">Hitta oss</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+                <!--flex box-->
+                <div id="container">
+                    <!--box ett-->
+                    <div class="preview">
+                         <!--Källa: https://cdn.pixabay.com/photo/2018/08/27/02/09/volvo-3633888_960_720.jpg-->
+                        <img src="img/pv-544.jpg" alt="Större bild på Volvo pv-544 Sedan">
+                    </div>
+                    <!--box två-->
+                    <div class="purchaseinfo">
+                        <h1>Volvo PV544 Sedan</h1>
+                        <p>Månadskostnad</p>
+                        <h2>6420 kr/mån</h2>
+                        <br>
+                        <p>Försäljningspris</p>
+                        <h2>575000 kr <a class="visa" href="https://www.kau.se/" target="_blank">Köp</a></h2>
+                    </div>
+                </div>
+
+                <table class="infobar">
+                    <tr>
+                        <td><a href="#information">Info</a></td>
+                        <td><a href="#ginfo">Generellt</a></td>
+                        <td><a href="#specs">Specifikationer</a></td>
+                        
+                    </tr>
+                </table>
+                <!--Lägger till ID på de nedanstående klasserna för att man ska kunna hoppa till de olika divboxarna 
+                    när man klickar på knapparna i infobar-->
+                <div class="infobox" id="information">
+                    <h2 >Information om bilen</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim convallis aenean et tortor at risus viverra adipiscing. </p>
+                    <p>Aliquet nec ullamcorper sit amet risus nullam. Arcu dui vivamus arcu felis bibendum. Id leo in vitae turpis massa sed elementum. Tortor dignissim convallis aenean et tortor. Imperdiet proin fermentum leo vel. Elementum eu facilisis sed odio. Tortor aliquam nulla facilisi cras fermentum odio. Malesuada fames ac turpis egestas. Purus semper eget duis at. </p>
+                    <p>Eget felis eget nunc lobortis mattis aliquam. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Eget dolor morbi non arcu risus quis varius quam quisque.</p>
+                    <hr>
+                    <h2>Generell information</h2>
+                    <table class="specs" id="ginfo">
+                        <tr>
+                            <th>Manuell/Automatisk</th>
+                            <td>Manuell</td> 
+                        </tr>
+
+                        <tr>
+                            <th>Bensin/Diesel</th>
+                            <td>Diesel</td> 
+                        </tr>
+
+                        <tr>
+                            <th>Mil</th>
+                            <td>3341</td> 
+                        </tr>
+                        
+                        <tr>
+                            <th>Färg</th>
+                            <td>Vermillion</td> 
+                        </tr>
+                    </table>
+                    <hr>
+                    <h2 >Specifikationer</h2>
+                    <table class="specs" id="specs">
+                        <tr>
+                            <th>Acceleration</th>
+                            <td>0 - 100 km/h på X sekunder</td> 
+                        </tr>
+
+                        <tr>
+                            <th>Bromssträcka</th>
+                            <td>100 - 0 km/h på X meter</td> 
+                        </tr>
+
+                        <tr>
+                            <th>Hästkrafter</th>
+                            <td>En viss mängd hästkrafter</td> 
+                        </tr>
+                        
+                        <tr>
+                            <th>Radio</th>
+                            <td>Kassett</td> 
+                        </tr>
+                    </table>
+                </div>
+            </main>
+        </body>
+    </html>
